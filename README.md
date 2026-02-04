@@ -8,7 +8,7 @@ Rather than focusing on recommendation systems, this project treats *subjective 
 
 ## Overview
 
-Most music platforms show *what* you listen to, but not *why* you feel the way you do.  
+My autism leads me to making a bunch of random spreadsheets just because I like to see data and categorize things, and now that I am playing around and exploring this genre of computer science, I'm finding use for all of my google sheets or excel spreadsheets and that's where this comes in. This project was born when a friend and I decided to make each other a playlist and I decided to thoroughly rank every single song with a bunch of random information about the song just for myself. Then I thought to myself hmmm, this could be useful. Most music platforms show *what* you listen to, but not *why* you feel the way you do.  
 This project bridges that gap by comparing written sentiment with numeric ratings and surfacing inconsistencies, surprises, and long-term patterns in personal music evaluation.
 
 All analysis runs entirely in the browser. No accounts, no tracking, no external APIs.
