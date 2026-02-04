@@ -1,63 +1,124 @@
-# Music Taste Bias & Surprise Analyzer
+# Playlist Rating Dissection
 
-A sophisticated web application that analyzes your personal music ratings to identify bias patterns, expectation gaps, and cultural influences across multiple dimensions.
+A client-side music analytics dashboard that analyzes personal playlist ratings to uncover bias patterns, expectation gaps, and cultural influences across genre, geography, language, and demographics.
 
-## 🎯 Core Features
+Rather than focusing on recommendation systems, this project treats *subjective taste itself* as data—exploring how written reviews, numeric ratings, and contextual metadata interact.
 
-### What You Think vs What You Actually Like
-The analyzer compares your written review sentiment against your actual numerical ratings to discover hidden biases and surprising preferences.
+---
 
-### Comprehensive Analytics
+## Overview
 
-#### 1. **Key Insights Dashboard**
-- **Bias Score**: Measures alignment between expectations and actual ratings (0-100%)
-- **Biggest Surprise**: Identifies the genre with most polarizing ratings
-- **Hidden Gem**: Finds highest-rated songs with initially negative reviews
+Most music platforms show *what* you listen to, but not *why* you feel the way you do.  
+This project bridges that gap by comparing written sentiment with numeric ratings and surfacing inconsistencies, surprises, and long-term patterns in personal music evaluation.
 
-#### 2. **Geographic Analysis**
-- **World Heat Map**: Interactive choropleth showing average ratings by country of origin
-- Warmer colors = higher ratings
-- Reveals geographic preferences and cultural biases
+All analysis runs entirely in the browser. No accounts, no tracking, no external APIs.
 
-#### 3. **Genre Performance**
-- **Genre × Rating Matrix**: Bar chart showing which genres consistently deliver
-- **Genre Variance Box Plot**: Reveals which genres are most polarizing for you
-- Identifies consistency patterns across different music styles
+---
 
-#### 4. **Demographic Insights**
-- **Rating by Race**: Average ratings across artist racial demographics
-- **Rating by Gender**: Gender-based rating analysis
-- Uncovers unconscious biases in music preferences
+## Core Features
 
-#### 5. **Expectation Gap Analysis**
-- Horizontal bar chart showing songs where review sentiment didn't match rating
-- Green bars: Rated higher than review suggested
-- Red bars: Rated lower than review suggested
-- Top 15 most surprising tracks
+### 1. Key Insights Dashboard
+- **Bias Score**  
+  Measures alignment between written sentiment and numeric ratings (0–100%)
+- **Biggest Surprise**  
+  Identifies the genre with the most rating volatility
+- **Hidden Gem**  
+  Finds highly rated tracks with initially negative reviews
 
-#### 6. **Track Length Impact**
-- Scatter plot correlating track length with ratings
-- Answers: "Do I punish long songs?"
-- Color-coded by rating (red to green gradient)
+---
 
-#### 7. **Language Performance**
-- Bar chart showing how multilingual tracks perform
-- Compares English vs non-English content
-- Reveals linguistic preferences
+### 2. Geographic Analysis
+- Interactive world choropleth showing average ratings by country of artist origin
+- Highlights geographic preferences and cultural trends
+- Hover tooltips reveal average rating and track count
 
-#### 8. **Time Travel Analysis**
-- Line graph showing rating trends across release years
+---
+
+### 3. Genre Performance
+- **Genre × Rating Matrix**  
+  Visualizes which genres consistently perform well
+- **Genre Variance Analysis**  
+  Reveals which genres are most polarizing over time
+
+---
+
+### 4. Demographic Insights
+- Average ratings grouped by:
+  - Artist race
+  - Artist gender
+- Designed for reflective analysis, not ranking or judgment
+- All demographic fields are user-defined
+
+---
+
+### 5. Expectation Gap Analysis
+- Horizontal bar chart comparing review sentiment vs numeric rating
+- Highlights tracks where emotion and score diverge
+- Focuses on the top 15 most surprising discrepancies
+
+---
+
+### 6. Track Length Impact
+- Scatter plot correlating track duration with rating
+- Explores whether longer tracks are penalized
+- Color-graded by rating intensity
+
+---
+
+### 7. Language Performance
+- Rating breakdown by language
+- Compares English and non-English tracks
+- Surfaces multilingual listening patterns
+
+---
+
+### 8. Time-Based Trends
+- Rating trends across release years
 - Identifies era preferences
-- Smooth trend visualization with area fill
+- Smooth line visualization with area fill
 
-#### 9. **Top & Bottom Tracks**
-- Beautiful card-based display of your best and worst rated songs
-- Full metadata including reviews, genre, language
-- Color-coded ratings (green/yellow/red)
+---
 
-## 📊 Data Format
+### 9. Top & Bottom Tracks
+- Card-based display of highest- and lowest-rated songs
+- Includes review excerpts and metadata
+- Color-coded ratings for quick scanning
 
-Your CSV should include these columns (tab-separated):
+---
+
+## Screenshots
+
+<img width="1891" height="864" alt="image" src="https://github.com/user-attachments/assets/b083b7d6-2de2-44d4-b5b5-8f708ad560cf" />
+<img width="1850" height="911" alt="image" src="https://github.com/user-attachments/assets/2c562466-fb84-4dc7-b9f5-bfdfe7bea316" />
+<img width="1816" height="809" alt="image" src="https://github.com/user-attachments/assets/abbb62dd-1b40-44fa-90ca-864b99631d7e" />
+<img width="1841" height="794" alt="image" src="https://github.com/user-attachments/assets/b3b3d4b4-0a8d-4d75-baef-21e08ce92b98" />
+<img width="1843" height="846" alt="image" src="https://github.com/user-attachments/assets/ed3c1f24-9596-4f0d-a1f4-f1fe678b8bbd" />
+<img width="1828" height="829" alt="image" src="https://github.com/user-attachments/assets/20d57453-75c6-4dce-afcb-384664143b2e" />
+<img width="1845" height="801" alt="image" src="https://github.com/user-attachments/assets/aa3bdd7c-0e48-4652-9ad7-7c42574b18f2" />
+<img width="1779" height="756" alt="image" src="https://github.com/user-attachments/assets/472fcb52-cfde-47a1-b3b6-9776b0c4ef25" />
+<img width="1811" height="786" alt="image" src="https://github.com/user-attachments/assets/e23dc781-d1b3-42a1-b696-d5cce66612e1" />
+<img width="1806" height="551" alt="image" src="https://github.com/user-attachments/assets/3ccc1df7-5919-4171-a818-782a0d5e3d74" />
+<img width="1739" height="839" alt="image" src="https://github.com/user-attachments/assets/b6f062e9-c05c-4115-9bf2-f698eb955aa3" />
+<img width="1626" height="665" alt="image" src="https://github.com/user-attachments/assets/76febfbd-a78a-49f7-878e-6fdb4421c6a1" />
+
+
+/screenshots
+├── landing-page.png
+├── key-insights.png
+├── world-map.png
+├── genre-analysis.png
+├── expectation-gap.png
+
+```bash
+
+Example usage in Markdown:
+```md
+![Key Insights Dashboard](screenshots/key-insights.png)
+```
+
+## Data Format
+
+- Upload a CSV file containing the following columns:
 - Title
 - Artist(s)
 - Genre
@@ -66,99 +127,56 @@ Your CSV should include these columns (tab-separated):
 - Length of Track
 - Language
 - Country of Origin (artist(s))
-- Rating (0-10 scale)
+- Rating (0–10 scale)
 - Review (text)
 - Race of Artist(s)
 - Gender of Artist(s)
 
-## 🎨 Design Philosophy
+Notes:
+- Supports tab-separated and comma-separated CSVs
+- Multiple values can be separated using &
+- All data is cleared on refresh
 
-Maintains the iconic Spotify aesthetic:
-- Dark theme (#191414 background)
-- Spotify green (#1DB954) as primary accent
-- Poppins font family
-- Smooth animations and transitions
-- Responsive design for all devices
+## Design Philosophy
 
-## 🚀 How to Use
+Inspired by the Spotify aesthetic while remaining neutral and analytical:
+- Dark theme with high contrast
+- Minimal color palette anchored by Spotify green
+- Clear typography using Poppins
+- Focus on readability and exploration over decoration
+- Responsive layout for desktop and mobile
 
-1. **Navigate to the Breakdown page**
-2. **Click "Upload your CSV file"**
-3. **Select your music ratings spreadsheet**
-4. **Watch as visualizations populate automatically**
-5. **Scroll through insights and discover your biases**
+## How to Use
 
-## 💡 Key Insights You'll Discover
+- Open the Breakdown page
+- Click Upload your CSV file
+- Select your playlist ratings spreadsheet
+- Visualizations render automatically
+- Explore trends, inconsistencies, and long-term patterns
 
-- Are you harder on certain demographics?
-- Do longer songs get unfairly rated?
-- Which languages perform better than expected?
-- What's your most polarizing genre?
-- Do your written reviews match your ratings?
-- Which countries produce music you love most?
-- Are newer or older songs rated higher?
+## Privacy & Ethics
 
-## 🎭 The "Bias Without Moralizing" Approach
+- All processing happens client-side
+- No data is uploaded or stored externally
+- No user accounts or tracking
+- Designed for self-reflection, not evaluation of artists
+- This project treats bias as signal, not error.
 
-This analyzer presents data objectively without judgment. It's designed to help you understand your preferences better, not to criticize them. Everyone has biases - the goal is awareness and self-knowledge.
+## Tech Stack
 
-## 📱 Responsive Features
+- Frontend: HTML5, CSS3, Vanilla JavaScript (ES6+)
+- Visualization: Plotly.js
+- Styling: CSS Grid, Flexbox
+- Fonts: Google Fonts (Poppins)
+- Data Parsing: Custom CSV parser (supports quoted fields)
 
-- Adaptive grid layouts
-- Mobile-optimized charts
-- Touch-friendly interactions
-- Scalable visualizations
+## Future Enhancements
 
-## 🎬 Animation Details
-
-- Fade-up animations for sections
-- Staggered reveal timing
-- Hover effects on cards and buttons
-- Smooth scroll behavior
-- Interactive chart tooltips
-
-## 🔧 Technical Stack
-
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Visualization**: Plotly.js for interactive charts
-- **Styling**: Custom CSS with CSS Grid and Flexbox
-- **Fonts**: Google Fonts (Poppins)
-- **Data Parsing**: Custom CSV parser supporting tab-separated values
-
-## 📦 File Structure
-
-```
-├── index.html              # Landing page
-├── breakdown.html          # Main analysis page
-├── faq.html               # FAQ page
-├── download_report.html   # Report download page
-├── styles.css             # All styling
-└── breakdown.js           # All functionality and visualizations
-```
-
-## 🎯 Portfolio Positioning
-
-**Resume Line**: "Built an interactive music bias analyzer using Plotly.js to visualize rating patterns across genre, language, demographics, and geography, revealing unconscious preferences through sentiment-rating gap analysis."
-
-## 🔮 Future Enhancements
-
-Potential additions:
-- Export visualizations as images
+- Export charts as images
 - PDF report generation
-- Comparison mode (multiple users)
-- Machine learning predictions
-- Spotify API integration
-- Share results on social media
-- Custom color themes
-- Additional sentiment analysis
+- Cross-playlist comparison
+- Advanced sentiment analysis
+- Spotify API integration (optional)
+- Custom theming
 
-## 📝 Notes
 
-- Data privacy: All processing happens client-side
-- No data is uploaded to servers
-- Works offline after initial load
-- Supports multiple file formats (CSV, XLS, XLSX)
-
----
-
-Built with ❤️ and data-driven curiosity
