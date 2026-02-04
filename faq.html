@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Playlist Rating Dissection</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">Playlist Analytics</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visualizations.html">Visualizations</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="download_report.html">Download</a></li>
+        </ul>
+    </nav>
+
+    <!-- FAQ Banner -->
+    <section class="faq-banner">
+        <div class="faq-banner-overlay">
+            <h1>FAQ</h1>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is this project?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        This is a client-side music analytics dashboard that explores personal playlist ratings.
+                        It combines numerical scores, written reviews, and metadata to reveal patterns in taste,
+                        bias, and consistency.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What problem does this solve?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Streaming platforms show engagement metrics, but they rarely explain <em>why</em>
+                        listeners feel the way they do. This project focuses on reflective analysis rather
+                        than recommendation algorithms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Where does the data come from?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        All data is user-provided via locally uploaded CSV files. Nothing is stored,
+                        tracked, or sent to a server.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is any data saved or shared?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        No. The dashboard runs entirely in the browser. Once the page is refreshed,
+                        all uploaded data is cleared.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Does this connect to Spotify or other APIs?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        No. The project intentionally avoids external APIs to keep the focus on
+                        user-curated data and subjective evaluation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What insights does the dashboard generate?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        It explores rating distributions, genre trends, track length effects,
+                        sentiment vs. score gaps, language patterns, and consistency across artists
+                        and albums.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How are written reviews analyzed?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Reviews are analyzed using keyword-based sentiment scoring. The goal is not
+                        perfect accuracy, but to highlight mismatches between emotional tone and
+                        numeric ratings.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is this analysis objective?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        No — and that’s intentional. Subjectivity is treated as a data source.
+                        Bias, expectations, and cultural context are part of the signal, not noise.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Why include race, gender, and country of origin?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        These fields allow exploration of representation and listening patterns.
+                        They are not used to rank or stereotype artists, and all data is
+                        user-defined.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Who is this project for?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        This dashboard is for music listeners, analysts, and anyone interested
+                        in exploring taste through data rather than algorithms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What technologies were used?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Built with HTML, CSS, and vanilla JavaScript. Data is parsed from CSV files
+                        and visualized using Plotly.js for interactive exploration.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What’s next for this project?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Planned improvements include deeper sentiment analysis, playlist comparisons,
+                        exportable reports, and enhanced filtering.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="visualizations.html">Visualizations</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="socials">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

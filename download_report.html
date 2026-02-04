@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <a href="index.html" class="logo">
+            <img src="SpotifyLogo.png" alt="Spotify Logo">
+        </a>        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="breakdown.html">Breakdown</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="download_report.html">Download Graph</a></li>
+        </ul>
+    </nav>
+
+    <!-- Download Report Banner -->
+    <section class="download-report-banner">
+        <div class="download-report-banner-overlay">
+            <h1>Download Report</h1>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-report-section">
+        <p class="download-instructions">Click the button <span class="highlight">below</span> to download your report summary in PDF format.</p>
+        <a href="#" class="download-btn">Download your report</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a> 
+                <a href="breakdown.html">Breakdown</a> 
+                <a href="faq.html">FAQ</a> 
+                <a href="download_report.html">Download Report</a>
+            </div>
+            <div class="socials">
+                <a href="https://x.com/akkoStoN" target="_blank">
+                    <img src="twitter-icon.png" alt="Twitter Icon" class="social-icon"> Twitter
+                </a> 
+                <a href="https://www.instagram.com/angelbadoobee/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram Icon" class="social-icon"> Instagram
+                </a>  
+                <a href="https://github.com/TahshonHolmes/" target="_blank">
+                    <img src="github-icon.png" alt="GitHub Icon" class="social-icon"> GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="breakdown.js"></script>
+    <!-- PDF Generation Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="downloadReport.js"></script>
+
+</body>
+</html>

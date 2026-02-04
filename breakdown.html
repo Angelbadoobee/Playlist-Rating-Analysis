@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Music Breakdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <a href="index.html" class="logo">
+            <img src="SpotifyLogo.png" alt="Spotify Logo">
+        </a>        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="breakdown.html">Breakdown</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="download_report.html">Download Graph</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+
+        <!-- Page Title and Upload Button -->
+        <section class="about">
+            <div class="about-text">
+                <h2>Your Music Breakdown</h2>
+                <p class="subtitle">Discover your hidden biases, unexpected patterns, and what you <em>actually</em> love</p>
+                <button id="uploadButton" class="cta-button">Click here to upload your CSV file</button>
+                <input type="file" id="fileInput" accept=".csv,.xls,.xlsx" style="display: none;">
+            </div>
+        </section>
+
+        <!-- Visualizations Section -->
+        <section id="visualizations" class="visualizations-container">
+            
+            <!-- Key Insights Section -->
+            <div id="keyInsights" class="insights-grid" style="display: none;">
+                <div class="insight-card">
+                    <h3>Your Bias Score</h3>
+                    <div id="biasScore" class="metric-large">-</div>
+                    <p class="metric-description">How aligned are your expectations with your actual ratings?</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Biggest Surprise</h3>
+                    <div id="biggestSurprise" class="metric-medium">-</div>
+                    <p class="metric-description">The category that defied your expectations most</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Hidden Gem</h3>
+                    <div id="hiddenGem" class="metric-medium">-</div>
+                    <p class="metric-description">The song you rated highest despite initial skepticism</p>
+                </div>
+            </div>
+
+            <!-- World Map for Song Origins -->
+            <div class="chart-section">
+                <h2 class="chart-title">Where Your Music Comes From</h2>
+                <p class="chart-subtitle">Heat map of countries based on average ratings</p>
+                <div id="worldMap" class="chart-container"></div>
+            </div>
+
+            <!-- Genre Heat Map -->
+            <div class="chart-section">
+                <h2 class="chart-title">Genre × Rating Matrix</h2>
+                <p class="chart-subtitle">Which genres consistently deliver (or disappoint)?</p>
+                <div id="genreHeatmap" class="chart-container"></div>
+            </div>
+
+            <!-- Race and Gender Comparison -->
+            <div class="chart-section">
+                <h2 class="chart-title">Rating by Demographics</h2>
+                <p class="chart-subtitle">Average ratings across artist race and gender</p>
+                <div class="charts-row">
+                    <div id="raceChart" class="chart-half"></div>
+                    <div id="genderChart" class="chart-half"></div>
+                </div>
+            </div>
+
+            <!-- Expectation Gap Analysis -->
+            <div class="chart-section">
+                <h2 class="chart-title">Expectation vs. Reality</h2>
+                <p class="chart-subtitle">Songs where your review sentiment didn't match your rating</p>
+                <div id="expectationGap" class="chart-container"></div>
+            </div>
+
+            <!-- Track Length Analysis -->
+            <div class="chart-section">
+                <h2 class="chart-title">Does Length Matter?</h2>
+                <p class="chart-subtitle">Track length vs. rating (do you punish long songs?)</p>
+                <div id="trackLengthScatter" class="chart-container"></div>
+            </div>
+
+            <!-- Language Performance -->
+            <div class="chart-section">
+                <h2 class="chart-title">Language Breakdown</h2>
+                <p class="chart-subtitle">How multilingual tracks perform in your ratings</p>
+                <div id="languageRatings" class="chart-container"></div>
+            </div>
+
+            <!-- Release Date Trends -->
+            <div class="chart-section">
+                <h2 class="chart-title">Time Traveling Through Your Taste</h2>
+                <p class="chart-subtitle">Rating trends across release years</p>
+                <div id="releaseDateGraph" class="chart-container"></div>
+            </div>
+
+            <!-- Genre Variance Box Plot -->
+            <div class="chart-section">
+                <h2 class="chart-title">Rating Consistency by Genre</h2>
+                <p class="chart-subtitle">Which genres are most polarizing for you?</p>
+                <div id="genreVariance" class="chart-container"></div>
+            </div>
+
+            <!-- Song Cards Deck -->
+            <div class="chart-section">
+                <h2 class="chart-title">Your Top & Bottom Tracks</h2>
+                <div id="songCards" class="song-cards-container"></div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a> 
+                <a href="breakdown.html">Breakdown</a> 
+                <a href="faq.html">FAQ</a> 
+                <a href="download_report.html">Download Report</a>
+            </div>
+            <div class="socials">
+                <a href="https://x.com/akkoStoN" target="_blank">
+                    <img src="twitter-icon.png" alt="Twitter Icon" class="social-icon"> Twitter
+                </a> 
+                <a href="https://www.instagram.com/angelbadoobee/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram Icon" class="social-icon"> Instagram
+                </a>  
+                <a href="https://github.com/TahshonHolmes/" target="_blank">
+                    <img src="github-icon.png" alt="GitHub Icon" class="social-icon"> GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="breakdown.js"></script>
+</body>
+</html>

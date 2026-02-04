@@ -1,0 +1,673 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #191414;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191414;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1DB954;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #1DB954;
+}
+
+/* Hero Section */
+.hero {
+    background: url('home page collage.jpg') no-repeat center center/cover;
+    height: 90vh;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(25,20,20,0.2) 70%, #191414 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    padding: 60px 40px;
+    text-align: center;
+    animation: fadeUp 2s ease forwards;
+    opacity: 0;
+    flex-grow: 1;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1DB954;
+}
+
+.about .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #b3b3b3;
+    font-style: italic;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+.cta-button {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Hover Effects */
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #1ed760;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(29, 185, 84, 0.5);
+}
+
+.cta-button span {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.cta-button:hover span {
+    transform: rotate(10deg);
+}
+
+/* Visualizations Container */
+.visualizations-container {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Key Insights Section */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.insight-card {
+    background: linear-gradient(135deg, #282828 0%, #1a1a1a 100%);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #1DB954;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(29, 185, 84, 0.3);
+}
+
+.insight-card h3 {
+    color: #1DB954;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.metric-large {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #1ed760;
+    margin: 20px 0;
+    text-shadow: 0 0 20px rgba(29, 185, 84, 0.5);
+}
+
+.metric-medium {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.metric-description {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Chart Sections */
+.chart-section {
+    margin-bottom: 80px;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+.chart-title {
+    font-size: 2.5rem;
+    color: #1DB954;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.chart-subtitle {
+    font-size: 1.2rem;
+    color: #b3b3b3;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.chart-container {
+    background: #282828;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+}
+
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.chart-half {
+    background: #282828;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+}
+
+/* Song Cards */
+.song-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.card-section h3 {
+    font-size: 2rem;
+    color: #1DB954;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.song-card {
+    background: linear-gradient(135deg, #282828 0%, #1a1a1a 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid #1DB954;
+    transition: all 0.3s ease;
+}
+
+.song-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(29, 185, 84, 0.3);
+}
+
+.song-card.top {
+    border-left-color: #1DB954;
+}
+
+.song-card.bottom {
+    border-left-color: #e74c3c;
+}
+
+.song-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.song-card h4 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.song-card .rating {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.rating.high {
+    background: #1DB954;
+    color: #ffffff;
+}
+
+.rating.mid {
+    background: #f39c12;
+    color: #ffffff;
+}
+
+.rating.low {
+    background: #e74c3c;
+    color: #ffffff;
+}
+
+.song-card .artist {
+    font-size: 1.2rem;
+    color: #1DB954;
+    margin-bottom: 10px;
+}
+
+.song-card .details {
+    color: #b3b3b3;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.song-card .review {
+    color: #cccccc;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.song-card .metadata {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1DB954;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.socials a {
+    color: #b3b3b3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #1DB954;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.socials a {
+    margin-top: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Typewriter Effect */
+#typewriter {
+    font-size: 130px;
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+}
+
+#typewriter::after {
+    content: '|';
+    font-weight: 100;
+    animation: blink 1.5s infinite;
+    position: absolute;
+    right: -10px;
+    font-size: inherit;
+    color: #ffffff;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #121212;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.hero, .about {
+    padding-top: 100px;
+}
+
+/* FAQ Banner */
+.faq-banner {
+    background: url('FAQBanner.jpg') no-repeat center center/cover;
+    height: 800px;
+    position: relative;
+}
+
+.faq-banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(25, 20, 20, 0.5) 70%, #191414 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-banner h1 {
+    font-size: 6rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Download Report Banner */
+.download-report-banner {
+    position: relative;
+    background-image: url('DownloadReportBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.download-report-banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(25, 20, 20, 0.5) 70%, #191414 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-report-banner-overlay h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Download Report Section */
+.download-report-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #191414;
+}
+
+.download-instructions {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #1DB954;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #1ed760;
+    transform: scale(1.1);
+}
+
+.download-btn:active {
+    transform: scale(1);
+}
+
+.highlight {
+    color: #1DB954;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-title {
+        font-size: 2rem;
+    }
+    
+    #typewriter {
+        font-size: 60px;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .song-card h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* FAQ Card */
+.faq-item {
+    background: linear-gradient(135deg, #282828 0%, #1a1a1a 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    border-left: 5px solid #1DB954;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 20px 40px rgba(29,185,84,0.25);
+}
+
+/* Question Button */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 25px 30px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-question span:first-child {
+    color: #1DB954;
+}
+
+/* Icon */
+.faq-icon {
+    font-size: 2rem;
+    color: #1DB954;
+    transition: transform 0.3s ease;
+}
+
+/* Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255,255,255,0.03);
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 30px;
+}
+
+.faq-answer p {
+    color: #cccccc;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding-bottom: 25px;
+}
+
+/* Active State */
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding-top: 10px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
