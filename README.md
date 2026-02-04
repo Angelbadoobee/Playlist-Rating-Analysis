@@ -102,13 +102,6 @@ All analysis runs entirely in the browser. No accounts, no tracking, no external
 <img width="1626" height="665" alt="image" src="https://github.com/user-attachments/assets/76febfbd-a78a-49f7-878e-6fdb4421c6a1" />
 
 
-/screenshots
-├── landing-page.png
-├── key-insights.png
-├── world-map.png
-├── genre-analysis.png
-├── expectation-gap.png
-
 ```bash
 
 Example usage in Markdown:
